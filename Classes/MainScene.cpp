@@ -1,26 +1,28 @@
-#include "HelloWorldScene.h"
+//
+//  MainScene.cpp
+//  Brave
+//
+//  Created by jack on 9/11/14.
+//
+//
+
+#include "MainScene.h"
 #include "Player.h"
 
 USING_NS_CC;
 
-Scene* HelloWorld::createScene()
-{
+Scene* MainScene::createScene(){
     auto scene = Scene::create();
-    
-    auto layer = HelloWorld::create();
-
+    auto layer = MainScene::create();
     scene->addChild(layer);
-
     return scene;
 }
 
-bool HelloWorld::init()
-{
-    if ( !Layer::init() )
-    {
+bool MainScene::init(){
+    if(!Layer::init()){
         return false;
     }
-    
+
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
@@ -43,4 +45,3 @@ bool HelloWorld::init()
     
     return true;
 }
-
