@@ -38,6 +38,9 @@ bool HelloWorld::init()
     enemy1->setPosition(origin.x + visibleSize.width - player->getContentSize().width/2, origin.y + visibleSize.height/2);
     this->addChild(enemy1);
     
+    player->playAnimationForever(1);
+    enemy1->playAnimationForever(1);
+    
     return true;
 }
 

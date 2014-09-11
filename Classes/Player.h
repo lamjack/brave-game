@@ -25,6 +25,7 @@ public:
 	bool initWithPlayerType(PlayerType type);
 	static Player* create(PlayerType type);
     void addAnimation();
+    void playAnimationForever(int index);
     
 private:
     PlayerType _type;
